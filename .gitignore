@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+
+# App data
+src/downloads/*
+!src/downloads/.gitkeep
+src/database/*.db
+
+# OS
+.DS_Store
+Thumbs.db

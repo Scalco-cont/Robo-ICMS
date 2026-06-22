@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: robo_icms
+    restart: unless-stopped
+    ports:
+      - '3939:3939'
+    expose:
+      - '3939'
+    environment:
+      - TZ=America/Cuiaba
+    volumes:
+      - icms_downloads:/app/src/downloads
+      - icms_database:/app/src/database
+
+volumes:
+  icms_downloads:
+    name: icms_downloads
+  icms_database:
+    name: icms_database
